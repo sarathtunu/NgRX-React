@@ -1,0 +1,36 @@
+<div class="mt-4">
+  <h3>Edit Employee</h3>
+  <form [formGroup]="employeeForm" (submit)="updateEmployee()" class="form-inline mb-4">
+
+    <label class="sr-only" for="fName">Name</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="firstName" placeholder="name">
+    </div>
+    <label class="sr-only" for="lName">Name</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="lastName" placeholder="name">
+    </div>
+    <label class="sr-only" for="Email">Email Address</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="email" placeholder="Email Address">
+    </div>
+
+    <label class="sr-only" for="membership">Activities</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <select formControlName="membership" class="form-control">
+        <option>Basic</option>
+        <option>Pro</option>
+        <option>Platinum</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Comments</span>
+      </div>
+      <textarea class="form-control" aria-label="With textarea" rows="4" cols="140" formControlName="comments"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Update Employee</button>
+
+  </form>
+</div>
